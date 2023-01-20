@@ -1,6 +1,16 @@
 # dsc-phase-4-project_work
 # Natural Language Processing: Sentiment Analysis for Steam video game reviews
 
+## Final Presentation Link, including visuals and discussion:  
+https://github.com/ericthansen/dsc-phase-4-project_work/blob/main/presentation_proj4.pdf
+## Data Source Link:  
+https://www.kaggle.com/code/luixmartins/starter-eda-steam-game-review/data
+
+## Instructions for navigation
+The root directory contains only final product files, including the Jupyter notebook containing Python code and a final presentation.  
+The images directory contains some visualizations that appear in the presentation.  
+The data directory contains the text reviews and ratings data.  
+
 ## Motivation
 Classification/prediction of text reviews is a useful tool for many different fields and is a perfect application of Natural Language Processing (NLP) techniques within Machine Learning/Deep Learning.  
 
@@ -29,8 +39,8 @@ Business problems that such an investigation could illuminate include:
 
 
 ## Data Sources
-Kaggle data source: https://www.kaggle.com/code/luixmartins/starter-eda-steam-game-review/data
-This includes 17494 text reviews from 2011-2018 (primarily 2014-2018), with game title, labeled as positive or negative.
+Kaggle data source: https://www.kaggle.com/code/luixmartins/starter-eda-steam-game-review/data  
+This includes 17494 text reviews from 2011-2018 (primarily 2014-2018), with game title, labeled as positive or negative.  
 Investigation is performed on: characters & words in reviews, reasonable distribution of stopwords, most common words in positive/negative reviews, top bi-grams in positive/negative reviews.
 
 ## Some typical preprocessing:
@@ -66,8 +76,11 @@ The initial approach is that of a binary classification (is a given review posit
 
 ### Models
 Model performance was ultimately ranked on accuracy, since this was the most business-interpretable metric of those listed above.  
-Logistic regression, Naive Bayes, support vector machines, singular value decomposition, XGBoost, and several Deep Learning models (including Dense network, RNN, LSTM and GRU) were constructed and applied to above feature sets.
-The best performing model (Logistic regression on TF-IDF set) had 84.3% accuracy on the test set.  Industry benchmarks are in the mid 90%s, so this is not terrible for an exploration project (and one with LOTS of vernacular/slang.
+Logistic regression, Naive Bayes, support vector machines, singular value decomposition, XGBoost, and several Deep Learning models (including Dense network, RNN, LSTM and GRU) were constructed and applied to above feature sets.  
+The best performing model (Logistic regression on TF-IDF set) had 84.3% accuracy on the test set.  Industry benchmarks are in the mid 90%s, so this is not terrible for an exploration project (and one with LOTS of vernacular/slang.  
+A slightly less accurate but more interpretable model is also explored for word salience.  
+Model performance (log-loss and accuracy) shown below.
+![Top 10 Most Accurate Models](https://github.com/ericthansen/dsc-phase-4-project_work/blob/main/images/modelLogLoss-Accuracy.png?raw=true)
 
 ## Further Improvements
 One of the desired future outcomes would to be to develop a "positivity/negativity" continuous rating to text reviews, with which to test consistency on non-binary ratings.  Also, improved performance on the deep learning models could be pursued, perhaps with additionally tuned or complex models or more data.
